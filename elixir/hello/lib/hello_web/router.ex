@@ -20,6 +20,14 @@ defmodule HelloWeb.Router do
     get "/", PageController, :home
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
+    get "/users", UserController, :index
+    get "/users/:id/edit", UserController, :edit
+    get "/users/new", UserController, :new
+    get "/users/:id", UserController, :show
+    post "/users", UserController, :create
+    patch "/users/:id", UserController, :update
+    put "/users/:id", UserController, :update
+    delete "/users/:id", UserController, :delete
   end
 
   # Other scopes may use custom stacks.
